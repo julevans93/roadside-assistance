@@ -24,4 +24,28 @@ public class UserService {
         return userRepo.save(newUser);
     }
 
+    public User updateUser (Long id, User newUserData){
+        User user = userRepo.findById(id).get();
+
+        user.setUsername(newUserData.getUsername());
+        user.setPassword(newUserData.getPassword());
+        user.setFirstName(newUserData.getFirstName());
+        user.setLastName(newUserData.getLastName());
+        user.setEmail(newUserData.getEmail());
+
+        return userRepo.save(user);
+    }
+
+    public User findByUserId (Long id){
+        return userRepo.findById(id).get();
+    }
+
+    public Boolean deleteUser (Long id) {
+        User user = userRepo.findById(id).get();
+        if (user != null){
+            userRepo.delete(user);
+            return true;
+        }
+        return false;
+    }
 }
