@@ -15,4 +15,4 @@ Users can click on any open request to get general details:
 - Once accepted users can message each other to discuss any other details.
 
 Once Service is complete:
--Both users need to select service complete.
+- Both users need to select service complete.
