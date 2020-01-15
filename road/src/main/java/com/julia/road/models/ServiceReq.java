@@ -6,7 +6,7 @@ import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class Service {
+public class ServiceReq {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,10 +20,10 @@ public class Service {
     @ManyToOne
     private User user;
 
-    public Service() {
+    public ServiceReq() {
     }
 
-    public Service(Long userId, String type, Location location, Vehicle vehicle, String details) {
+    public ServiceReq(Long userId, String type, Location location, Vehicle vehicle, String details) {
         this.userId = userId;
         this.type = type;
         this.location = location;
